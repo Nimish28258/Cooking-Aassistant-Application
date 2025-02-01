@@ -1,11 +1,13 @@
+require('dotenv').config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const bcryptjs = require("bcryptjs");
 app.use(express.json());
 
-const mongoUrl =
-  "mongodb+srv://admin:admin@cluster0.nbvn1z6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const port = process.env.PORT || 5000;
+
+const mongoUrl = process.env.MONGODB_URI;
 
 mongoose
   .connect(mongoUrl)
