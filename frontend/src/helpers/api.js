@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = "http://192.168.0.200:5001";
+const apiUrl = process.env.REACT_APP_API_URL;
 
 export const registerUser = async (name, email, password) => {
   try {
