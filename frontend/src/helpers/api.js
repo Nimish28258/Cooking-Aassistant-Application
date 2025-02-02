@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = process.env.REACT_APP_API_URL;
+const apiUrl = "https://cooking-assistant-backend.onrender.com";
 
 export const registerUser = async (name, email, password) => {
   try {
